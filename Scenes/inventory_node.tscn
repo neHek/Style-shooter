@@ -1,0 +1,92 @@
+[gd_scene load_steps=3 format=3 uid="uid://5heudqfdw5i3"]
+
+[ext_resource type="Script" uid="uid://cikswo5hym0iy" path="res://Scripts/Inventory.gd" id="1_05s4j"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_i0s08"]
+
+[node name="InventoryNode" type="Control" groups=["InventoryNode"]]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_05s4j")
+
+[node name="DebugLabel" type="Label" parent="."]
+layout_mode = 0
+offset_left = 972.0
+offset_top = 521.0
+offset_right = 1374.0
+offset_bottom = 580.0
+label_settings = SubResource("LabelSettings_i0s08")
+
+[node name="DebugLabel2" type="Label" parent="."]
+layout_mode = 0
+offset_top = 71.0
+offset_right = 402.0
+offset_bottom = 130.0
+
+[node name="ActiveSlot" type="Label" parent="."]
+layout_mode = 0
+offset_left = 726.0
+offset_top = 985.0
+offset_right = 826.0
+offset_bottom = 1008.0
+
+[node name="InventoryUI" type="GridContainer" parent="." groups=["inventory_ui"]]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 0
+offset_left = 723.0
+offset_top = 875.0
+offset_right = 1239.0
+offset_bottom = 975.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+columns = 5
+
+[node name="ColorRect" type="ColorRect" parent="InventoryUI"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+color = Color(0, 1, 0, 1)
+
+[node name="Sprite" type="Sprite2D" parent="InventoryUI/ColorRect"]
+position = Vector2(50, 50)
+
+[node name="ColorRect2" type="ColorRect" parent="InventoryUI"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+color = Color(0, 0.572617, 0.0512847, 1)
+
+[node name="Sprite" type="Sprite2D" parent="InventoryUI/ColorRect2"]
+position = Vector2(50, 50)
+
+[node name="ColorRect3" type="ColorRect" parent="InventoryUI"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+color = Color(0, 0.572617, 0.0512847, 1)
+
+[node name="Sprite" type="Sprite2D" parent="InventoryUI/ColorRect3"]
+position = Vector2(50, 50)
+
+[node name="ColorRect4" type="ColorRect" parent="InventoryUI"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+color = Color(0, 0.572617, 0.0512847, 1)
+
+[node name="Sprite" type="Sprite2D" parent="InventoryUI/ColorRect4"]
+position = Vector2(50, 50)
+
+[node name="ColorRect5" type="ColorRect" parent="InventoryUI"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+color = Color(0, 0.572617, 0.0512847, 1)
+
+[node name="Sprite" type="Sprite2D" parent="InventoryUI/ColorRect5"]
+position = Vector2(50, 50)
+
+[node name="AimAssist" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 956.0
+offset_top = 502.0
+offset_right = 958.0
+offset_bottom = 504.0
+color = Color(0, 1, 0, 1)
+
+[connection signal="inventory_updated" from="." to="." method="_on_inventory_updated"]

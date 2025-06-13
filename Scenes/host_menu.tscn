@@ -1,0 +1,232 @@
+[gd_scene load_steps=3 format=3 uid="uid://dsoxd8qhpqyws"]
+
+[ext_resource type="Script" uid="uid://3iivs6jwqwdr" path="res://Scripts/host_menu.gd" id="1_5in3f"]
+[ext_resource type="Script" uid="uid://dydnn8rlwlyit" path="res://Scenes/menu.gd" id="1_mhnvy"]
+
+[node name="Main" type="Node"]
+
+[node name="Menu" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_mhnvy")
+
+[node name="StartMenu" type="Control" parent="Menu"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Menu/StartMenu"]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -50.5
+offset_bottom = 50.5
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Menu/StartMenu/HBoxContainer"]
+layout_mode = 2
+
+[node name="Play" type="Button" parent="Menu/StartMenu/HBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+text = "Play"
+
+[node name="Settings" type="Button" parent="Menu/StartMenu/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "Settings"
+
+[node name="Quit" type="Button" parent="Menu/StartMenu/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "Quit
+"
+
+[node name="HostMenu" type="Control" parent="Menu"]
+visible = false
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 160.0
+offset_bottom = 160.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+script = ExtResource("1_5in3f")
+
+[node name="Back" type="Button" parent="Menu/HostMenu"]
+custom_minimum_size = Vector2(100, 75)
+layout_mode = 1
+offset_right = 100.0
+offset_bottom = 75.0
+text = "Back"
+
+[node name="Host" type="Button" parent="Menu/HostMenu"]
+layout_mode = 2
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 40.0001
+offset_top = -60.0
+offset_right = 98.0001
+offset_bottom = -29.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(2.23781, 2.48798)
+text = "Host"
+
+[node name="Join" type="Button" parent="Menu/HostMenu"]
+layout_mode = 2
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -214.0
+offset_top = -60.0
+offset_right = -161.0
+offset_bottom = -29.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(2.731, 2.53939)
+text = "Join"
+
+[node name="StartGame" type="Button" parent="Menu/HostMenu"]
+layout_mode = 2
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -155.0
+offset_top = -230.0
+offset_right = -59.0
+offset_bottom = -199.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(2.731, 2.53939)
+disabled = true
+text = "Start Game
+"
+
+[node name="IP" type="LineEdit" parent="Menu/HostMenu"]
+layout_mode = 0
+offset_left = 248.0
+offset_top = 333.0
+offset_right = 492.0
+offset_bottom = 380.0
+text = "192.168.0.153"
+
+[node name="Label" type="Label" parent="Menu/HostMenu"]
+layout_mode = 0
+offset_left = 199.0
+offset_top = 333.0
+offset_right = 219.0
+offset_bottom = 356.0
+scale = Vector2(1.73216, 1.98826)
+text = "IP:
+"
+
+[node name="Name" type="LineEdit" parent="Menu/HostMenu"]
+layout_mode = 0
+offset_left = 249.0
+offset_top = 265.0
+offset_right = 493.0
+offset_bottom = 312.0
+text = "Ivan"
+
+[node name="Label2" type="Label" parent="Menu/HostMenu"]
+layout_mode = 0
+offset_left = 149.0
+offset_top = 265.0
+offset_right = 200.0
+offset_bottom = 288.0
+scale = Vector2(1.73216, 1.98826)
+text = "Name:"
+
+[node name="Log" type="RichTextLabel" parent="Menu/HostMenu"]
+layout_mode = 0
+offset_left = 200.0
+offset_top = 410.0
+offset_right = 561.0
+offset_bottom = 1039.0
+bbcode_enabled = true
+
+[node name="PlayerList" type="RichTextLabel" parent="Menu/HostMenu"]
+layout_mode = 0
+offset_left = 204.0
+offset_top = 10.0
+offset_right = 501.0
+offset_bottom = 248.0
+bbcode_enabled = true
+text = "[center][b]Players[/b][/center]
+"
+
+[node name="Reset" type="Button" parent="Menu/HostMenu"]
+layout_mode = 0
+offset_left = 996.0
+offset_top = 590.0
+offset_right = 1047.0
+offset_bottom = 621.0
+text = "Reset"
+
+[node name="SettingsMenu" type="Control" parent="Menu"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Menu/SettingsMenu"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Menu/SettingsMenu/HBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 4
+
+[node name="MasterVolume" type="Label" parent="Menu/SettingsMenu/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "Master Volume"
+
+[node name="MasterVolumeSlider" type="HSlider" parent="Menu/SettingsMenu/HBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+min_value = -50.0
+max_value = 0.0
+
+[node name="Back" type="Button" parent="Menu/SettingsMenu"]
+custom_minimum_size = Vector2(100, 75)
+layout_mode = 2
+offset_right = 100.0
+offset_bottom = 75.0
+text = "Back"
+
+[connection signal="pressed" from="Menu/StartMenu/HBoxContainer/VBoxContainer/Play" to="Menu" method="_on_play_pressed"]
+[connection signal="pressed" from="Menu/StartMenu/HBoxContainer/VBoxContainer/Settings" to="Menu" method="_on_settings_pressed"]
+[connection signal="pressed" from="Menu/StartMenu/HBoxContainer/VBoxContainer/Quit" to="Menu" method="_on_quit_pressed"]
+[connection signal="pressed" from="Menu/HostMenu/Back" to="Menu" method="back_to_main"]
+[connection signal="button_down" from="Menu/HostMenu/Host" to="Menu/HostMenu" method="_on_host_button_down"]
+[connection signal="button_down" from="Menu/HostMenu/Join" to="Menu/HostMenu" method="_on_join_button_down"]
+[connection signal="button_down" from="Menu/HostMenu/StartGame" to="Menu/HostMenu" method="_on_start_game_button_down"]
+[connection signal="pressed" from="Menu/HostMenu/Reset" to="Menu/HostMenu" method="_on_reset_pressed"]
+[connection signal="value_changed" from="Menu/SettingsMenu/HBoxContainer/VBoxContainer/MasterVolumeSlider" to="Menu" method="_on_master_volume_slider_value_changed"]
+[connection signal="pressed" from="Menu/SettingsMenu/Back" to="Menu" method="back_to_main"]

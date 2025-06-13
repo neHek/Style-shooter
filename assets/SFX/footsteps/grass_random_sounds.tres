@@ -1,0 +1,11 @@
+[gd_resource type="AudioStreamRandomizer" load_steps=4 format=3 uid="uid://bt853p7iqmqhy"]
+
+[ext_resource type="AudioStream" uid="uid://eflyll2wgxjq" path="res://assets/SFX/footsteps/footsteps_player_grass_01.ogg" id="1_lx710"]
+[ext_resource type="AudioStream" uid="uid://dwoyrfdoqvww3" path="res://assets/SFX/footsteps/footsteps_player_grass_02.ogg" id="2_d6jkp"]
+[ext_resource type="AudioStream" uid="uid://bhn4bxdiujqq8" path="res://assets/SFX/footsteps/footsteps_player_grass_03.ogg" id="3_6cboc"]
+
+[resource]
+streams_count = 3
+stream_0/stream = ExtResource("1_lx710")
+stream_1/stream = ExtResource("2_d6jkp")
+stream_2/stream = ExtResource("3_6cboc")
