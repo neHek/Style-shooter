@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://b4fe73ta473xa" path="res://Scripts/main_scene.gd" id="1_pu3yx"]
 [ext_resource type="Texture2D" uid="uid://cd6hweb35xb81" path="res://assets/metal/atlas.png" id="2_pu3yx"]
-[ext_resource type="PackedScene" uid="uid://cdk6hwb4hi2wc" path="res://Scenes/player.tscn" id="3_gubc5"]
+[ext_resource type="PackedScene" uid="uid://cdk6hwb4hi2wc" path="res://Scenes/PlayerPrefab/player.tscn" id="3_gubc5"]
 
 [sub_resource type="Environment" id="Environment_c16ls"]
 volumetric_fog_density = 0.01
